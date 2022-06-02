@@ -1,0 +1,18 @@
+{
+    "name": "Bröllopsfotografen APP",
+    "short_name": "Bröllopsfotografen",
+    "start_url": "../../index.html",
+    "display": "standalone",
+    "background_color": "#2a2e30",
+    "description": "capturing photo",
+    "theme_color": "#2a2e30",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "../img/logo.png",
+        "type": "image/png",
+        "sizes": "182x182"
+      }
+    ]
+  }
+  
