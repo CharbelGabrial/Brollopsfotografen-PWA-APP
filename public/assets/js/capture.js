@@ -7,7 +7,6 @@ window.addEventListener("load", (e) => {
     "X-Master-Key",
     "$2b$10$DyG7SWxMLxX0khCea/X9Ye36W6cXsjXacQ/iK.TIHOljjEkD.U0dW"
   );
-  req.send();
 
   let galleryImgIcon = document.querySelector(".gallery_img_icon");
   let gallerylogo = document.querySelector(".gallery_logo");
@@ -42,7 +41,7 @@ window.addEventListener("load", (e) => {
         let getArrayImages = window.localStorage.getItem("images");
 
         let ArrayParse = JSON.parse(getArrayImages);
-        console.log(ArrayParse);
+        // console.log(ArrayParse);
 
         let imgSrc = e.target
           .closest(".img_wrapper")
@@ -87,7 +86,7 @@ window.addEventListener("load", (e) => {
 
       req.onreadystatechange = () => {
         if (req.readyState == XMLHttpRequest.DONE) {
-          console.log(req.responseText);
+          // console.log(req.responseText);
         }
       };
 
@@ -109,7 +108,7 @@ window.addEventListener("load", (e) => {
         window.localStorage.setItem("images", json);
       } else {
         let ArrayParse = JSON.parse(getArrayImages);
-        console.log(ArrayParse);
+        // console.log(ArrayParse);
         let newArray = [dataurl, ...ArrayParse];
         let json = JSON.stringify(newArray);
         window.localStorage.setItem("images", json);

@@ -56,7 +56,23 @@ window.addEventListener("load", (e) => {
     });
   }
 
-  setTimeout(() => {
-    window.alert("Bilden har sparats");
-  }, 500);
+  const NotificationShow = () => {
+    const notify = new Notification(
+      "Nytt meddelande från Bröllopsfotografen APP",
+      {
+        body: "Bilden har sparats",
+      }
+    );
+  };
+  console.log(Notification.permission);
+  if (Notification.permission === "granted") {
+    NotificationShow();
+  } else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then((permis) => {
+      if (permis === "granted") {
+        NotificationShow();
+        console.log(Notification.permission);
+      }
+    });
+  }
 });
